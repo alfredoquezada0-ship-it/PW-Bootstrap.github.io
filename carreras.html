@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNPHU - Carreras</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-unphu sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="img/logonav.png" alt="UNPHU" height="40" style="filter: brightness(0) invert(1);">
+            <span class="navbar-brand-text d-none d-md-block">UNPHU</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto gap-1">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="historia.html"><i class="bi bi-book-fill me-1"></i>Historia</a></li>
+                <li class="nav-item"><a class="nav-link active" href="carreras.html"><i class="bi bi-mortarboard-fill me-1"></i>Carreras</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-fill me-1"></i>Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div style="background: linear-gradient(135deg, #006400, #004d00); color:white; padding: 60px 0;">
+    <div class="container text-center">
+        <h1 style="font-family:'Playfair Display',serif; font-size:3rem; font-weight:900;">Carreras en la UNPHU</h1>
+        <p class="lead mt-2" style="color:rgba(255,255,255,0.8);">+30 programas académicos para construir tu futuro profesional</p>
+    </div>
+</div>
+
+<div class="container py-5">
+
+    <!-- Table -->
+    <h2 class="section-title">Facultades y Programas</h2>
+    <div class="table-responsive mb-5">
+        <table class="table table-unphu table-hover rounded-3 overflow-hidden shadow-sm">
+            <thead>
+                <tr>
+                    <th><i class="bi bi-building me-1"></i>Facultad</th>
+                    <th><i class="bi bi-book me-1"></i>Carreras</th>
+                    <th><i class="bi bi-clock me-1"></i>Duración</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ingeniería</td><td>Ingeniería Civil, Ingeniería Industrial, Sistemas</td><td><span class="badge bg-success">5 años</span></td></tr>
+                <tr><td>Salud</td><td>Medicina, Odontología, Farmacia</td><td><span class="badge bg-danger">6 años</span></td></tr>
+                <tr><td>Humanidades</td><td>Educación, Psicología, Derecho</td><td><span class="badge bg-primary">4 años</span></td></tr>
+                <tr><td>Arquitectura y Artes</td><td>Arquitectura, Diseño Gráfico</td><td><span class="badge bg-success">5 años</span></td></tr>
+                <tr><td>Ciencias Económicas</td><td>Administración de Empresas, Contabilidad, Marketing</td><td><span class="badge bg-primary">4 años</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Cards -->
+    <h2 class="section-title">Carreras Destacadas</h2>
+    <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-4">
+            <div class="card carrera-card h-100">
+                <div class="card-header"><i class="bi bi-cpu-fill me-2"></i>Ingeniería en Sistemas</div>
+                <div class="card-body">
+                    <p class="card-text">Prepara especialistas en desarrollo de software, redes, bases de datos e inteligencia artificial. Es una de las carreras con mayor demanda laboral.</p>
+                    <button class="btn btn-sm btn-outline-success" data-bs-toggle="collapse" data-bs-target="#det1">Ver requisitos</button>
+                    <div class="collapse mt-2" id="det1" style="background:#f0f7f0; border-radius:8px; padding:12px;">
+                        <small><strong>Requisito especial:</strong> Prueba de matemáticas<br><strong>Duración:</strong> 5 años<br><strong>Salario promedio:</strong> RD$45,000–70,000</small>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <button class="btn btn-unphu btn-sm w-100" data-bs-toggle="modal" data-bs-target="#carreraModal" onclick="setCarrera('💻 Ingeniería en Sistemas','5 años','RD$45,000–70,000','Prueba de matemáticas')">Solicitar info</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card carrera-card h-100">
+                <div class="card-header"><i class="bi bi-heart-pulse-fill me-2"></i>Medicina</div>
+                <div class="card-body">
+                    <p class="card-text">Una de las carreras más completas y exigentes de la UNPHU. Forma médicos generales con sólida base científica y ética.</p>
+                    <button class="btn btn-sm btn-outline-success" data-bs-toggle="collapse" data-bs-target="#det2">Ver requisitos</button>
+                    <div class="collapse mt-2" id="det2" style="background:#f0f7f0; border-radius:8px; padding:12px;">
+                        <small><strong>Requisito especial:</strong> Prueba de aptitud + entrevista<br><strong>Duración:</strong> 6 años + residencia<br><strong>Salario promedio:</strong> RD$60,000–90,000</small>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <button class="btn btn-unphu btn-sm w-100" data-bs-toggle="modal" data-bs-target="#carreraModal" onclick="setCarrera('⚕️ Medicina','6 años + residencia','RD$60,000–90,000','Prueba de aptitud + entrevista')">Solicitar info</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card carrera-card h-100">
+                <div class="card-header"><i class="bi bi-scales me-2"></i>Derecho</div>
+                <div class="card-body">
+                    <p class="card-text">Capacita a los estudiantes en el análisis e interpretación de las leyes dominicanas e internacionales. Egresados trabajan como abogados, jueces y diplomáticos.</p>
+                    <button class="btn btn-sm btn-outline-success" data-bs-toggle="collapse" data-bs-target="#det3">Ver requisitos</button>
+                    <div class="collapse mt-2" id="det3" style="background:#f0f7f0; border-radius:8px; padding:12px;">
+                        <small><strong>Requisito especial:</strong> Prueba de admisión general<br><strong>Duración:</strong> 4 años<br><strong>Salario promedio:</strong> RD$35,000–60,000</small>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <button class="btn btn-unphu btn-sm w-100" data-bs-toggle="modal" data-bs-target="#carreraModal" onclick="setCarrera('⚖️ Derecho','4 años','RD$35,000–60,000','Prueba de admisión general')">Solicitar info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Campo laboral -->
+    <h2 class="section-title">Campo Laboral</h2>
+    <div class="alert" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9); border-left:5px solid #006400; border-radius:10px; color:#1b5e20;" role="alert">
+        <i class="bi bi-graph-up-arrow me-2"></i>
+        <strong>El 85%</strong> de los graduados de la UNPHU se incorpora al mercado laboral dentro de los primeros 6 meses.
+    </div>
+    <div class="table-responsive mb-5">
+        <table class="table table-unphu table-hover shadow-sm rounded-3 overflow-hidden">
+            <thead>
+                <tr>
+                    <th>Carrera</th>
+                    <th>Dónde trabajan</th>
+                    <th>Salario inicial (RD$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ingeniería en Sistemas</td><td>Empresas tecnológicas, bancos, startups, trabajo remoto</td><td><strong>45,000 – 70,000</strong></td></tr>
+                <tr><td>Medicina</td><td>Hospitales, clínicas privadas, centros de salud pública</td><td><strong>60,000 – 90,000</strong></td></tr>
+                <tr><td>Derecho</td><td>Bufetes, instituciones del Estado, empresas privadas</td><td><strong>35,000 – 60,000</strong></td></tr>
+                <tr><td>Administración de Empresas</td><td>Empresas nacionales e internacionales, emprendimiento</td><td><strong>35,000 – 55,000</strong></td></tr>
+                <tr><td>Arquitectura</td><td>Constructoras, diseño de interiores, urbanismo</td><td><strong>40,000 – 65,000</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Testimonios HOVER -->
+    <h2 class="section-title">Testimonios de Estudiantes</h2>
+    <div class="testimonio">
+        <strong>María González — Ingeniería en Sistemas, 4to. año</strong>
+        <p class="mb-0 mt-2">"La UNPHU me ha dado las herramientas para desarrollarme como programadora. Los laboratorios están muy bien equipados y los profesores tienen experiencia real en la industria."</p>
+    </div>
+    <div class="testimonio">
+        <strong>Carlos Pérez — Medicina, 3er. año</strong>
+        <p class="mb-0 mt-2">"Estudiar medicina en la UNPHU es exigente pero muy gratificante. Las prácticas clínicas comienzan desde temprano y eso nos prepara muy bien para la realidad del hospital."</p>
+    </div>
+    <div class="testimonio">
+        <strong>Valeria Rodríguez — Derecho, recién graduada</strong>
+        <p class="mb-0 mt-2">"Me gradué hace 3 meses y ya estoy trabajando en un bufete en Santo Domingo. La formación que recibí en la UNPHU fue muy sólida. Recomiendo la carrera 100%."</p>
+    </div>
+</div>
+
+<!-- Carrera Modal -->
+<div class="modal fade" id="carreraModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius:20px; overflow:hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #006400, #004d00); border:none;">
+                <h5 class="modal-title text-white fw-bold" id="carreraModalTitle">Información de Carrera</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div id="carreraInfo" class="mb-3 p-3 rounded-3" style="background:#f0f7f0;"></div>
+                <label class="form-label fw-semibold">Tu nombre</label>
+                <input type="text" class="form-control mb-3" placeholder="Nombre completo">
+                <label class="form-label fw-semibold">Tu correo</label>
+                <input type="email" class="form-control mb-3" placeholder="correo@ejemplo.com">
+            </div>
+            <div class="modal-footer border-0">
+                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-unphu"><i class="bi bi-send-fill me-2"></i>Solicitar Info</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container text-center">
+        <p style="color:rgba(255,255,255,0.4); font-size:0.85rem;">&copy; 2026 UNPHU — Universidad Nacional Pedro Henríquez Ureña</p>
+    </div>
+</footer>
+
+<a href="contacto.html" class="fixed-chat-btn">
+    <div class="btn-pulse"></div>
+    <i class="bi bi-chat-dots-fill"></i>
+    <span>Contáctanos</span>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function setCarrera(nombre, duracion, salario, requisito) {
+    document.getElementById('carreraModalTitle').textContent = 'Info: ' + nombre;
+    document.getElementById('carreraInfo').innerHTML = `
+        <div><i class="bi bi-mortarboard-fill text-success me-2"></i><strong>Carrera:</strong> ${nombre}</div>
+        <div><i class="bi bi-clock text-success me-2"></i><strong>Duración:</strong> ${duracion}</div>
+        <div><i class="bi bi-currency-dollar text-success me-2"></i><strong>Salario:</strong> ${salario}</div>
+        <div><i class="bi bi-clipboard-check text-success me-2"></i><strong>Requisito:</strong> ${requisito}</div>
+    `;
+}
+</script>
+</body>
+</html>
